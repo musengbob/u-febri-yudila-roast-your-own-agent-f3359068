@@ -27,11 +27,10 @@ function validateLine(line: string): void {
 
 function getOutputDir(): string {
   const dir = process.env.MAKEFUN_OUTPUT_DIR;
-  if (dir && dir.trim() !== "") return dir;
-  // Local testing default: a scratch dir inside the repo.
-  // The grader always sets MAKEFUN_OUTPUT_DIR, so this fallback
-  // only applies to local runs.
-  return join(process.cwd(), "output");
+  if (!dir || dir.trim() === "") {
+    throw new Error("MAKEFUN_OUTPUT_DIR is not set");
+  }
+  return dir;
 }
 
 function writeEntry(outDir: string, line: string): string {
