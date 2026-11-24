@@ -1,0 +1,1 @@
+{"description":"Roast Your Own Agent — a single funny line roasting our own AI agent (make.fun bounty entry)","engines":{"node":">=22"},"main":"main.ts","name":"u-febri-yudila-roast-your-own-agent-f3359068","private":true,"scripts":{"start":"node main.ts"},"type":"module","version":"1.0.0"}
